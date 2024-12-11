@@ -5,28 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1127775-cd6c-4b76-a81b-dfa46f5a9179" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/DatabaseConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/TestQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Aditya-aka"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Aditya-aka&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Aditya-aka/orginiele_gui.git",
-    "accountId": "cbba931a-4633-427c-a489-9d878bfd6039"
+    "accountId": "c8b0fb35-3e99-4336-9e22-793fc582962a"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -59,7 +67,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/daanb/Downloads/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.6413793"
   }
