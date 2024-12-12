@@ -10,7 +10,7 @@ import java.io.IOException;
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        switchView(stage, "admin.fxml");
+        switchView(stage, "Loginscreen.fxml");
     }
 
     public static void switchView(Stage stage, String fileName) throws IOException {

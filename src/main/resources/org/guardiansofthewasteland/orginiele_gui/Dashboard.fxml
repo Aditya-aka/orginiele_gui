@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="259.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="260.0" style="-fx-background-radius: 8%; -fx-background-color: #738c6d;">
+            <children>
+                <Pane layoutX="14.0" layoutY="73.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="4.0" text="Laak " textFill="#738c6d">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                        </Label>
+                        <ProgressBar layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="0.78" style="-fx-background-color: #000000;" />
+                    </children>
+                </Pane>
+                <Pane layoutX="14.0" layoutY="168.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="4.0" text="Scheveningen" textFill="#738c6d">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                        </Label>
+                        <ProgressBar layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="0.29" style="-fx-background-color: #000000;" />
+                    </children>
+                </Pane>
+                <Pane layoutX="14.0" layoutY="260.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="4.0" text="Centrum" textFill="#738c6d">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                        </Label>
+                        <ProgressBar layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="0.58" style="-fx-background-color: #000000;" />
+                    </children>
+                </Pane>
+                <Pane layoutX="14.0" layoutY="349.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="4.0" text="Loosduinen" textFill="#738c6d">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                        </Label>
+                        <ProgressBar layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="1.0" style="-fx-background-color: #000000;" />
+                    </children>
+                </Pane>
+                <ComboBox layoutX="50.0" layoutY="30.0" prefWidth="150.0" promptText="Den Haag" style="-fx-background-color: #FFFFFF;" />
+            </children></AnchorPane>
+    </content>
+</ScrollPane>
