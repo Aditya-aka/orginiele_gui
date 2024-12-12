@@ -38,18 +38,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="600.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.guardiansofthewasteland.orginiele_gui.AdminController">
+<VBox prefHeight="409.0" prefWidth="259.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.guardiansofthewasteland.orginiele_gui.AdminController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane prefHeight="409.0" prefWidth="259.0" style="-fx-background-color: #738c6d; -fx-background-radius: 8%;">
          <children>
-            <Button layoutX="142.0" layoutY="499.0" mnemonicParsing="false" onAction="#onAddUserButtonClick" text="ADD USER" textAlignment="RIGHT" />
-            <TextField fx:id="nameField" layoutX="70.0" layoutY="262.0" prefHeight="26.0" prefWidth="190.0" promptText="Name :" />
-            <TextField fx:id="emailField" layoutX="70.0" layoutY="307.0" prefHeight="26.0" prefWidth="190.0" promptText="Email" />
-            <TextField fx:id="phoneField" layoutX="70.0" layoutY="352.0" prefHeight="26.0" prefWidth="190.0" promptText="Phone :" />
-            <TextField fx:id="passwordField" layoutX="70.0" layoutY="428.0" prefHeight="26.0" prefWidth="190.0" promptText="Password :" />
-            <TextField fx:id="locationField" layoutX="70.0" layoutY="391.0" prefHeight="26.0" prefWidth="190.0" promptText="Location :" />
-            <Button layoutX="139.0" layoutY="60.0" mnemonicParsing="false" onAction="#onReturnButtonClick" text="return" />
-            <Label fx:id="welcomeText" layoutX="151.0" layoutY="103.0" text="Label" />
+            <Button layoutX="94.0" layoutY="345.0" mnemonicParsing="false" onAction="#onAddUserButtonClick" text="ADD USER" textAlignment="RIGHT" />
+            <TextField fx:id="nameField" layoutX="34.0" layoutY="142.0" prefHeight="26.0" prefWidth="190.0" promptText="Name :" />
+            <TextField fx:id="emailField" layoutX="35.0" layoutY="179.0" prefHeight="26.0" prefWidth="190.0" promptText="Email" />
+            <TextField fx:id="phoneField" layoutX="34.0" layoutY="216.0" prefHeight="26.0" prefWidth="190.0" promptText="Phone :" />
+            <TextField fx:id="passwordField" layoutX="34.0" layoutY="291.0" prefHeight="26.0" prefWidth="190.0" promptText="Password :" />
+            <TextField fx:id="locationField" layoutX="34.0" layoutY="254.0" prefHeight="26.0" prefWidth="190.0" promptText="Location :" />
+            <Button layoutX="105.0" layoutY="44.0" mnemonicParsing="false"  text="return" />
+            <Label fx:id="welcomeText" layoutX="115.0" layoutY="82.0" />
          </children>
       </AnchorPane>
    </children>

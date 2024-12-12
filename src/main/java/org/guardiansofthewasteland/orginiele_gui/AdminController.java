@@ -50,12 +50,12 @@ public class AdminController {
         System.out.println("De account is aangemaakt.");
 
     }
-    @FXML
+  /*  @FXML
     private void onReturnButtonClick() throws IOException {
-
-        MainApplication.switchView((Stage) welcomeText.getScene().getWindow(), "user.fxml");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("HomescreenController.fxml"));
+        MainApplication.switchView((Stage) welcomeText.getScene().getWindow(), "HomescreenController.fxml");
 
         System.out.println("onReturnButtonClick() called");
-    }
+    } */
 
 }

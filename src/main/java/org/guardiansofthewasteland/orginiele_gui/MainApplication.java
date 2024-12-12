@@ -15,7 +15,7 @@ public class MainApplication extends Application {
 
     public static void switchView(Stage stage, String fileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(fileName));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 259, 409);
         stage.setTitle("Guardians of the Wasteland");
         stage.setScene(scene);
         stage.show();

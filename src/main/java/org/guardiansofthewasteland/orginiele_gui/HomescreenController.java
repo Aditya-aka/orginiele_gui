@@ -30,4 +30,64 @@ public class HomescreenController {
         }
 
     }
+
+    @FXML
+    private void OpenRoute() {
+
+
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RouteScreen.fxml"));
+            Parent root = fxmlLoader.load();
+
+
+            Stage stage = new Stage();
+            stage.setTitle("Route");
+            stage.setScene(new Scene(root, 259, 409));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    private void OpenAdmin() {
+
+
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin.fxml"));
+            Parent root = fxmlLoader.load();
+
+
+            Stage stage = new Stage();
+            stage.setTitle("Route");
+            stage.setScene(new Scene(root, 259, 409));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    @FXML
+    private void OpenUser () {
+
+
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user.fxml"));
+            Parent root = fxmlLoader.load();
+
+
+            Stage stage = new Stage();
+            stage.setTitle("Route");
+            stage.setScene(new Scene(root, 259, 409));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 }
