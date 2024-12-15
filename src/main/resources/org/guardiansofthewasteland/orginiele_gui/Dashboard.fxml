@@ -10,46 +10,8 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="259.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.guardiansofthewasteland.orginiele_gui.DashboardController">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="260.0" style="-fx-background-radius: 8%; -fx-background-color: #738c6d;">
-            <children>
-                <Pane fx:id="pane1" layoutX="14.0" layoutY="73.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
-                    <children>
-                        <Label fx:id="label1" layoutX="14.0" layoutY="4.0" text="Laak " textFill="#738c6d">
-                            <font>
-                                <Font name="Berlin Sans FB" size="18.0" />
-                            </font>
-                        </Label>
-                        <ProgressBar fx:id="progressBar1" layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="0.78" style="-fx-background-color: #000000;" />
-                    </children>
-                </Pane>
-                <Pane fx:id="pane2" layoutX="14.0" layoutY="168.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
-                    <children>
-                        <Label fx:id="label2" layoutX="14.0" layoutY="4.0" text="Scheveningen" textFill="#738c6d">
-                            <font>
-                                <Font name="Berlin Sans FB" size="18.0" />
-                            </font>
-                        </Label>
-                        <ProgressBar fx:id="progressBar2" layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="0.29" style="-fx-background-color: #000000;" />
-                    </children>
-                </Pane>
-                <Pane fx:id="pane3" layoutX="14.0" layoutY="260.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
-                    <children>
-                        <Label fx:id="label3" layoutX="14.0" layoutY="4.0" text="Centrum" textFill="#738c6d">
-                            <font>
-                                <Font name="Berlin Sans FB" size="18.0" />
-                            </font>
-                        </Label>
-                        <ProgressBar fx:id="progressBar3" layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="0.58" style="-fx-background-color: #000000;" />
-                    </children>
-                </Pane>
-                <Pane fx:id="pane4" layoutX="14.0" layoutY="349.0" prefHeight="79.0" prefWidth="222.0" style="-fx-background-color: #cbd2a4; -fx-background-radius: 10%;">
-                    <children>
-                        <Label fx:id="label4" layoutX="14.0" layoutY="4.0" text="Loosduinen" textFill="#738c6d">
-                            <font>
-                                <Font name="Berlin Sans FB" size="18.0" />
-                            </font>
-                        </Label>
-                        <ProgressBar fx:id="progressBar4" layoutX="11.0" layoutY="31.0" prefHeight="29.0" prefWidth="200.0" progress="1.0" style="-fx-background-color: #000000;" />
-                    </children>
-                </Pane>
-
+        <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="260.0" style="-fx-background-radius: 8%; -fx-background-color: #738c6d;">
+            <!-- This AnchorPane will hold your dynamically added VBox -->
+        </AnchorPane>
+    </content>
+</ScrollPane>

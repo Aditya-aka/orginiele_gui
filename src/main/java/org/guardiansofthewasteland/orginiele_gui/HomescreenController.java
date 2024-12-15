@@ -20,6 +20,9 @@ public class HomescreenController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
             Parent root = fxmlLoader.load();
 
+            // Get the controller and call the loadData method
+            DashboardController controller = fxmlLoader.getController();
+            controller.loadData();
 
             Stage stage = new Stage();
             stage.setTitle("Dashboard");
