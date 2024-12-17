@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class HomescreenController {
 
-
     private Stage currentStage;
     private Stage previousStage;
 
@@ -27,7 +26,7 @@ public class HomescreenController {
     @FXML
     private void goBackToPreviousScreen() {
         try {
-            
+
             if (currentStage != null) {
                 System.out.println("Closing current stage (HomeScreen)...");
                 currentStage.close();
