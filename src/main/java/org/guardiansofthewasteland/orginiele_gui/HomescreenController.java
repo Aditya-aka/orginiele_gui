@@ -11,6 +11,44 @@ import java.io.IOException;
 
 public class HomescreenController {
 
+
+    private Stage currentStage;
+    private Stage previousStage;
+
+
+    public void setCurrentStage(Stage stage) {
+        this.currentStage = stage;
+    }
+
+        //public void setPreviousStage(Stage stage) {
+      //  this.previousStage = stage;
+    //}
+
+    @FXML
+    private void goBackToPreviousScreen() {
+        try {
+            
+            if (currentStage != null) {
+                System.out.println("Closing current stage (HomeScreen)...");
+                currentStage.close();
+            }  else {
+            System.out.println("currentStage is null, can't close it.");
+        }
+
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Loginscreen.fxml"));
+            Parent root = loader.load();
+
+
+            Scene scene = new Scene(root);
+            Stage loginStage = new Stage();
+            loginStage.setScene(scene);
+            loginStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @FXML
     private void OpenDashboard() {
 
