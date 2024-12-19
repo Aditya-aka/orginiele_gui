@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -75,6 +76,9 @@ public class DashboardController extends Application {
             e.printStackTrace();
         }
 
+        vbox.setPrefWidth(AnchorPane.USE_COMPUTED_SIZE); // Ensure VBox fills width of AnchorPane
+        anchorPane.setMinHeight(600); // Set minimum height for AnchorPane to extend background
+        anchorPane.getChildren().clear();
         anchorPane.getChildren().add(vbox);
     }
 
@@ -97,13 +101,13 @@ public class DashboardController extends Application {
         progressBar.setStyle("-fx-background-color: #000000;");
 
         if (capacity < 250) {
-            progressBar.setStyle("-fx-accent: red;");
-        } else if (capacity >= 250 && capacity < 500) {
-            progressBar.setStyle("-fx-accent: orange;");
-        } else if (capacity >= 500 && capacity < 700) {
-            progressBar.setStyle("-fx-accent: yellow;");
-        } else {
             progressBar.setStyle("-fx-accent: green;");
+        } else if (capacity >= 250 && capacity < 500) {
+            progressBar.setStyle("-fx-accent: yellow;");
+        } else if (capacity >= 500 && capacity < 700) {
+            progressBar.setStyle("-fx-accent: orange;");
+        } else {
+            progressBar.setStyle("-fx-accent: red;");
         }
 
         pane.getChildren().addAll(label, progressBar);

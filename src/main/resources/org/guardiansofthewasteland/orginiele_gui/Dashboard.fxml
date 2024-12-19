@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
@@ -8,9 +7,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="259.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.guardiansofthewasteland.orginiele_gui.DashboardController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.guardiansofthewasteland.orginiele_gui.DashboardController">
     <content>
-        <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="260.0" style="-fx-background-radius: 8%; -fx-background-color: #738c6d;">
+        <AnchorPane fx:id="anchorPane" minHeight="600.0" minWidth="800.0" style="-fx-background-radius: 8%; -fx-background-color: #738c6d;">
             <!-- This AnchorPane will hold your dynamically added VBox -->
         </AnchorPane>
     </content>
