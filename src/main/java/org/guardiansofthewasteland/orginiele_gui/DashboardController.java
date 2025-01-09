@@ -1,13 +1,13 @@
 package org.guardiansofthewasteland.orginiele_gui;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -18,11 +18,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class DashboardController extends Application {
 
     @FXML
     private AnchorPane anchorPane;
+
+    private static final int REFRESH_INTERVAL = 5000; // 5 seconden interval voor verversing
 
     @Override
     public void start(Stage primaryStage) {
@@ -33,7 +37,7 @@ public class DashboardController extends Application {
             Scene scene = new Scene(root, 800, 600);
 
             DashboardController controller = loader.getController();
-            controller.loadData();
+            controller.startAutoRefresh(); // Start automatische verversing
 
             primaryStage.setScene(scene);
             primaryStage.setTitle("Dynamic Pane App");
@@ -41,6 +45,17 @@ public class DashboardController extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void startAutoRefresh() {
+        // Instellen van een timer om periodiek data op te halen
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Platform.runLater(() -> loadData()); // Haal data op uit de database binnen de JavaFX Application Thread
+            }
+        }, 0, REFRESH_INTERVAL);
     }
 
     public void loadData() {
@@ -93,18 +108,18 @@ public class DashboardController extends Application {
         label.setTextFill(javafx.scene.paint.Color.web("#738c6d"));
         label.setFont(new javafx.scene.text.Font("Berlin Sans FB", 18));
 
-        double progress = Math.min(capacity / 1000.0, 1.0);
+        double progress = Math.min(capacity / 200.0, 1.0);
         ProgressBar progressBar = new ProgressBar(progress);
         progressBar.setLayoutX(11);
         progressBar.setLayoutY(31);
         progressBar.setPrefSize(200, 29);
         progressBar.setStyle("-fx-background-color: #000000;");
 
-        if (capacity < 250) {
+        if (capacity < 50) {
             progressBar.setStyle("-fx-accent: green;");
-        } else if (capacity >= 250 && capacity < 500) {
+        } else if (capacity >= 50 && capacity < 100) {
             progressBar.setStyle("-fx-accent: yellow;");
-        } else if (capacity >= 500 && capacity < 700) {
+        } else if (capacity >= 100 && capacity < 150) {
             progressBar.setStyle("-fx-accent: orange;");
         } else {
             progressBar.setStyle("-fx-accent: red;");
