@@ -19,7 +19,10 @@ public class MainApplication extends Application {
         primarystage.show();
 
         LoginscreenController controller = loader.getController();
+        
         controller.setCurrentstage(primarystage);
+
+
     }
 
 

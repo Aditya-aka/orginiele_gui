@@ -31,34 +31,45 @@ public class DashboardController extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/guardiansofthewasteland/orginiele_gui/dashboard.fxml"));
+            System.out.println("Starting application..."); // Debugging print statement
 
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/guardiansofthewasteland/orginiele_gui/dashboard.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root, 800, 600);
-
-            DashboardController controller = loader.getController();
-            controller.startAutoRefresh(); // Start automatische verversing
 
             primaryStage.setScene(scene);
             primaryStage.setTitle("Dynamic Pane App");
             primaryStage.show();
+
+            System.out.println("Primary stage shown"); // Debugging print statement
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    @FXML
+    private void initialize() {
+        System.out.println("Controller initialized"); // Debugging print statement
+        startAutoRefresh(); // Start automatische verversing
+    }
+
     public void startAutoRefresh() {
-        // Instellen van een timer om periodiek data op te halen
+        System.out.println("Setting up timer..."); // Debugging print statement
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Platform.runLater(() -> loadData()); // Haal data op uit de database binnen de JavaFX Application Thread
+                System.out.println("TimerTask running..."); // Debugging print statement
+                Platform.runLater(() -> {
+                    System.out.println("Refreshing data..."); // Print statement toegevoegd
+                    loadData(); // Haal data op uit de database binnen de JavaFX Application Thread
+                });
             }
         }, 0, REFRESH_INTERVAL);
     }
 
     public void loadData() {
+        System.out.println("Loading data..."); // Debugging print statement
         VBox vbox = new VBox();
         vbox.setSpacing(10);
 
@@ -74,7 +85,7 @@ public class DashboardController extends Application {
                 while (resultSet.next()) {
                     String location = resultSet.getString("Locatie");
                     int capacity = resultSet.getInt("Capaciteit");
-                    System.out.println("Location: " + location + ", Capacity: " + capacity);
+                    System.out.println("Location: " + location + ", Capacity: " + capacity); // Debugging print statement
 
                     Pane pane = createPane(location, capacity);
                     vbox.getChildren().add(pane);
@@ -87,14 +98,17 @@ public class DashboardController extends Application {
                 System.out.println("Failed to connect to the database.");
             }
         } catch (SQLException e) {
-            System.out.println("SQL error occurred:");
+            System.out.println("SQL error occurred");
             e.printStackTrace();
         }
 
-        vbox.setPrefWidth(AnchorPane.USE_COMPUTED_SIZE); // Ensure VBox fills width of AnchorPane
-        anchorPane.setMinHeight(600); // Set minimum height for AnchorPane to extend background
-        anchorPane.getChildren().clear();
-        anchorPane.getChildren().add(vbox);
+        Platform.runLater(() -> {
+            vbox.setPrefWidth(AnchorPane.USE_COMPUTED_SIZE); // Ensure VBox fills width of AnchorPane
+            anchorPane.setMinHeight(600); // Set minimum height for AnchorPane to extend background
+            anchorPane.getChildren().clear();
+            anchorPane.getChildren().add(vbox);
+            System.out.println("Data loaded and UI updated"); // Debugging print statement
+        });
     }
 
     private Pane createPane(String location, int capacity) {

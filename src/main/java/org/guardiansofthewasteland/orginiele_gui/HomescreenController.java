@@ -50,8 +50,6 @@ public class HomescreenController {
 
     @FXML
     private void OpenDashboard() {
-
-
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
