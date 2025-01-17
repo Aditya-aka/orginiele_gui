@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e1127775-cd6c-4b76-a81b-dfa46f5a9179" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/LoginscreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/LoginscreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/guardiansofthewasteland/orginiele_gui/Loginscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/guardiansofthewasteland/orginiele_gui/Loginscreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +32,12 @@
     &quot;assignee&quot;: &quot;Aditya-aka&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Aditya-aka/orginiele_gui.git&quot;,
-    &quot;accountId&quot;: &quot;c8b0fb35-3e99-4336-9e22-793fc582962a&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Aditya-aka/orginiele_gui.git",
+    "accountId": "db71b44e-5a23-4886-9161-a56413b288ae"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>

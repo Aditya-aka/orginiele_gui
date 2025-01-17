@@ -2,7 +2,6 @@ module org.guardiansofthewasteland.orginiele_gui {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-    requires javax.servlet.api;
     requires jbcrypt;
 
 

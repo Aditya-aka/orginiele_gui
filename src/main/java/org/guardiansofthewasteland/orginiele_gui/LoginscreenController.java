@@ -64,16 +64,44 @@ public class LoginscreenController {
     }
 
     @FXML
-    private void CheckLogin() {
+    private void CheckLogin(ActionEvent event) {
         String username = UsernameBox.getText();
         String password = PasswordBox.getText();
 
-        if (LoginConfirmation(username, password)) {
+        LoginInsert(username, password);
+       /* if (LoginConfirmation(username, password)) {
             openNewScene();
         } else {
             System.out.println("Login failed. Please check your username and password.");
+        } */
+    }
+
+    @FXML
+    private void LoginInsert(String username, String textpassword) {
+
+        String hashedPassword = BCrypt.hashpw(textpassword, BCrypt.gensalt());
+        int medewerkerId = 1;
+
+        try (Connection connection = DatabaseConnect.getConnection();
+             Statement statement = connection.createStatement()) {
+
+            if (connection != null) {
+                System.out.println("Connection established!");
+
+
+                String query =  "UPDATE medewerker SET username = '" + username + "', hashedpassword = '" + textpassword+ "' medewerker_id = " + medewerkerId;;
+
+
+
+                statement.executeUpdate(query);
+                System.out.println("User successfully inserted.");
+            }
+        } catch (SQLException e) {
+
+            e.printStackTrace();
         }
     }
+
 
     @FXML
     private boolean LoginConfirmation(String username, String password) {
@@ -122,6 +150,9 @@ public class LoginscreenController {
         return false;
     }
 }
+
+
+
 
 
 
