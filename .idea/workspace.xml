@@ -7,8 +7,6 @@
     <list default="true" id="e1127775-cd6c-4b76-a81b-dfa46f5a9179" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/HomescreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/HomescreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/guardiansofthewasteland/orginiele_gui/MainApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

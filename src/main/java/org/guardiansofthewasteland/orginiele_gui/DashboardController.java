@@ -122,21 +122,22 @@ public class DashboardController extends Application {
         label.setTextFill(javafx.scene.paint.Color.web("#738c6d"));
         label.setFont(new javafx.scene.text.Font("Berlin Sans FB", 18));
 
-        double progress = Math.min(capacity / 200.0, 1.0);
+        double progress = Math.max(1.0 - (capacity / 50.0), 0.0);
+
         ProgressBar progressBar = new ProgressBar(progress);
         progressBar.setLayoutX(11);
         progressBar.setLayoutY(31);
         progressBar.setPrefSize(200, 29);
         progressBar.setStyle("-fx-background-color: #000000;");
 
-        if (capacity < 50) {
-            progressBar.setStyle("-fx-accent: green;");
-        } else if (capacity >= 50 && capacity < 100) {
-            progressBar.setStyle("-fx-accent: yellow;");
-        } else if (capacity >= 100 && capacity < 150) {
-            progressBar.setStyle("-fx-accent: orange;");
-        } else {
+        if (capacity < 10) {
             progressBar.setStyle("-fx-accent: red;");
+        } else if (capacity >= 10 && capacity < 25) {
+            progressBar.setStyle("-fx-accent: orange;");
+        } else if (capacity >= 25 && capacity < 32) {
+            progressBar.setStyle("-fx-accent: yellow;");
+        } else {
+            progressBar.setStyle("-fx-accent: green;");
         }
 
         pane.getChildren().addAll(label, progressBar);
