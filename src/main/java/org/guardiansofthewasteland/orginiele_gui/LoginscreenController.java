@@ -89,7 +89,7 @@ public class LoginscreenController {
                 System.out.println("Connection established!");
 
 
-                String query =  "UPDATE medewerker SET username = '" + username + "', hashedpassword = '" + textpassword+ "' medewerker_id = " + medewerkerId;;
+                String query =  "UPDATE medewerker SET username = '" + username + "', password = '" + textpassword+ "'WHERE medewerker_id =" + medewerkerId;;
 
 
 
