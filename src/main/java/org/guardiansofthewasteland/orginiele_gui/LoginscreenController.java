@@ -13,13 +13,10 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.PreparedStatement;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.mindrot.jbcrypt.BCrypt;
-
-
-
 
 public class LoginscreenController {
     @FXML
@@ -68,45 +65,39 @@ public class LoginscreenController {
         String username = UsernameBox.getText();
         String password = PasswordBox.getText();
 
-        LoginInsert(username, password);
-       /* if (LoginConfirmation(username, password)) {
+        if (LoginConfirmation(username, password)) {
             openNewScene();
         } else {
             System.out.println("Login failed. Please check your username and password.");
-        } */
+        }
     }
 
     @FXML
     private void LoginInsert(String username, String textpassword) {
-
         String hashedPassword = BCrypt.hashpw(textpassword, BCrypt.gensalt());
         int medewerkerId = 1;
         System.out.println(hashedPassword);
         try (Connection connection = DatabaseConnect.getConnection();
-             Statement statement = connection.createStatement()) {
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "UPDATE medewerker SET username = ?, password = ? WHERE medewerker_id = ?")) {
 
             if (connection != null) {
                 System.out.println("Connection established!");
-
-
-                String query =  "UPDATE medewerker SET username = '" + username + "', hashedpassword = '" + textpassword+ "' medewerker_id = " + medewerkerId;
-
-
-
-                statement.executeUpdate(query);
+                preparedStatement.setString(1, username);
+                preparedStatement.setString(2, hashedPassword);
+                preparedStatement.setInt(3, medewerkerId);
+                preparedStatement.executeUpdate();
                 System.out.println("User successfully inserted.");
             }
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
     }
 
-
     @FXML
     private boolean LoginConfirmation(String username, String password) {
         Connection connection = null;
-        Statement preparedStatement = null;
+        PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try {
@@ -115,16 +106,13 @@ public class LoginscreenController {
             if (connection != null) {
                 System.out.println("Connection established!");
 
-
-                String query = "SELECT password FROM medewerker WHERE username = '" + username + "'";
+                String query = "SELECT password FROM medewerker WHERE username = ?";
                 preparedStatement = connection.prepareStatement(query);
-
-
-                resultSet = preparedStatement.executeQuery(query);
+                preparedStatement.setString(1, username);
+                resultSet = preparedStatement.executeQuery();
 
                 if (resultSet.next()) {
                     String storedHashedPassword = resultSet.getString("password");
-
 
                     if (BCrypt.checkpw(password, storedHashedPassword)) {
                         return true;
@@ -137,7 +125,6 @@ public class LoginscreenController {
             System.out.println("SQL error occurred");
             e.printStackTrace();
         } finally {
-
             try {
                 if (resultSet != null) resultSet.close();
                 if (preparedStatement != null) preparedStatement.close();
@@ -146,14 +133,6 @@ public class LoginscreenController {
                 e.printStackTrace();
             }
         }
-
         return false;
     }
 }
-
-
-
-
-
-
-
